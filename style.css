@@ -151,6 +151,9 @@ header#main-header button.mute-all.muted img.v-mute {
   justify-content: center;
   cursor: pointer;
 }
+.right-sidebar .icon.active svg * {
+  fill: #f3a952;
+}
 #mixer {
   position: absolute;
   z-index: 501;
