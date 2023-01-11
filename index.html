@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="range.css" /> -->
+    <title>Lofi App</title>
+  </head>
+  <body>
+    <main class="lofi-main">
+      <header id="main-header">
+        <div class="logo">
+          <a href="/"><img src="assets/images/logo.gif" alt="logo" /></a>
+        </div>
+        <div class="right-area">
+          <div class="music-player-controll">
+            <button class="audio-pre">
+              <img src="assets/images/prev.svg" alt="prev" />
+            </button>
+            <button class="audio-button">
+              <img class="play-i" src="assets/images/play.svg" alt="play" />
+              <img class="pause-i" src="assets/images/pause.svg" alt="pause" />
+            </button>
+            <button class="audio-next">
+              <img src="assets/images/next.svg" alt="next" />
+            </button>
+          </div>
+          <button class="mute-all">
+            <img
+              class="v-active"
+              src="assets/images/volume-active.svg"
+              alt="volume-active"
+            />
+            <img
+              class="v-mute"
+              src="assets/images/volume-muted.svg"
+              alt="volume-muted"
+            />
+          </button>
+        </div>
+      </header>
+      <div class="right-sidebar">
+        <div class="icon mixer-icon">
+          <div class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 21 21"
+              fill="none"
+              class="injected-svg"
+              data-src="/icons/new/menu-mixer.svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M14.1909 0C12.5311 0 11.1411 1.15543 10.7814 2.70586L0.954551 2.70586C0.42737 2.70586 6.19543e-06 3.13322 6.19543e-06 3.6604C6.19543e-06 4.18758 0.427371 4.61495 0.954551 4.61495H10.8722C11.3378 6.00129 12.6477 7 14.1909 7C15.7341 7 17.044 6.00129 17.5096 4.61495H20.0455C20.5726 4.61495 21 4.18758 21 3.6604C21 3.13322 20.5726 2.70586 20.0455 2.70586H17.6004C17.2407 1.15543 15.8508 0 14.1909 0Z"
+                fill="#949494"
+              ></path>
+              <path
+                d="M5.28182 7C3.67197 7 2.31598 8.08687 1.90759 9.56685L0.92954 9.59249C0.40254 9.6063 -0.0134795 10.0447 0.000334292 10.5717C0.014148 11.0987 0.452564 11.5147 0.979564 11.5009L1.91979 11.4763C2.34241 12.9342 3.68765 14 5.28182 14C6.86684 14 8.20578 12.9464 8.63648 11.5013H20.0455C20.5726 11.5013 21 11.074 21 10.5468C21 10.0196 20.5726 9.59224 20.0455 9.59224H8.66295C8.26314 8.09932 6.90086 7 5.28182 7Z"
+                fill="#949494"
+              ></path>
+              <path
+                d="M14.1909 14C12.6133 14 11.2794 15.0438 10.8423 16.4785H0.954551C0.427371 16.4785 6.80232e-06 16.9058 6.80232e-06 17.433C6.80232e-06 17.9602 0.427371 18.3876 0.954551 18.3876H10.8044C11.1973 19.8908 12.5646 21 14.1909 21C15.8172 21 17.1845 19.8908 17.5774 18.3875H20.0455C20.5726 18.3875 21 17.9602 21 17.433C21 16.9058 20.5726 16.4785 20.0455 16.4785H17.5395C17.1024 15.0438 15.7685 14 14.1909 14Z"
+                fill="#949494"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="icon template-icon">
+          <div class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 21 21"
+              fill="none"
+              class="injected-svg"
+              data-src="/icons/new/menu-templates.svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M9.66238 0V6.30259H0.602927C1.55983 3.35462 3.98825 1.09486 7.03471 0.378681C7.9006 0.175122 8.77988 0.0488953 9.66238 0Z"
+                fill="#949494"
+              ></path>
+              <path
+                d="M11.3376 3.19319e-07V13.0184H20.7905C21.1234 11.0315 21.0596 8.99479 20.599 7.02706C19.8269 3.72823 17.2569 1.15248 13.9653 0.378681C13.0994 0.175123 12.2201 0.0488958 11.3376 3.19319e-07Z"
+                fill="#949494"
+              ></path>
+              <path
+                d="M20.3971 14.6973H11.3376V21C12.2201 20.9511 13.0994 20.8249 13.9653 20.6213C17.0118 19.9051 19.4402 17.6454 20.3971 14.6973Z"
+                fill="#949494"
+              ></path>
+              <path
+                d="M9.66238 21V7.98154H0.20952C-0.123394 9.96843 -0.0595734 12.0052 0.400983 13.973C1.17308 17.2718 3.74315 19.8475 7.03471 20.6213C7.9006 20.8249 8.77988 20.9511 9.66238 21Z"
+                fill="#949494"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="videos-wrapper">
+        <div class="screen1">
+          <div class="bg-video default">
+            <video
+              src="assets/video/inside+-+day.mp4"
+              preload="auto"
+              loop
+              playsinline
+              webkit-playsinline
+              x5-playsinline
+              autoplay
+            ></video>
+          </div>
+        </div>
+      </div>
+      <div class="music-player">
+        <audio
+          id="audio"
+          loop
+          playsinline
+          webkit-playsinline
+          x5-playsinline
+          src="assets/audio/demo-audio.mp3"
+        ></audio>
+      </div>
+      <div id="mixer">
+        <div class="music-volume">
+          <img src="assets/images/volume-down.svg" alt="volume-down" />
+          <div class="range">
+            <input
+              type="range"
+              value="40"
+              min="0"
+              max="100"
+              step="1"
+              id="music-volume"
+            />
+          </div>
+          <img src="assets/images/volume-up.svg" alt="volume-up" />
+        </div>
+        <div class="sounds-wrap">
+          <h2>Sounds</h2>
+          <div class="keyboard">
+            <span>Keyboard</span>
+            <div class="range">
+              <input
+                type="range"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+                id="keyboard"
+              />
+            </div>
+            <audio
+              loop
+              playsinline
+              webkit-playsinline
+              x5-playsinline
+              src="assets/audio/keyboard.mp3"
+            ></audio>
+          </div>
+          <div class="city-traffic">
+            <span>City Traffic</span>
+            <div class="range">
+              <input
+                type="range"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+                id="city-traffic"
+              />
+            </div>
+            <audio
+              loop
+              playsinline
+              webkit-playsinline
+              x5-playsinline
+              src="assets/audio/city_traffic.mp3"
+            ></audio>
+          </div>
+          <div class="city-rain">
+            <span>City Rain</span>
+            <div class="range">
+              <input
+                type="range"
+                value="0"
+                min="0"
+                max="100"
+                step="1"
+                id="city-rain"
+              />
+            </div>
+            <audio
+              loop
+              playsinline
+              webkit-playsinline
+              x5-playsinline
+              src="assets/audio/rain_city.mp3"
+            ></audio>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

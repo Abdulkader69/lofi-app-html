@@ -1,0 +1,170 @@
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  outline: none;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  /* // Penser à faire des styles :focus sur les sous élements */
+}
+
+/* // IE */
+input[type='range']::-ms-track {
+  cursor: pointer;
+  width: 100%;
+
+  /* // Cache le slider natif */
+  border-color: transparent;
+  background: transparent;
+  color: transparent;
+}
+
+/* // Settings */
+
+::root {
+  --range-thumb-width: 32px;
+  --range-thumb-height: 32px;
+  --range-thumb-border: 0;
+  --range-thumb-radius: 32px;
+  --range-thumb-background: #0053a1
+    url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxOCAxMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIiBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEuNDE0MjE7Ij48cGF0aCBpZD0iSWNvbiIgZD0iTTExLjEzNCwxLjQ5MmMtMC4zNzEsLTAuMzQ3IC0wLjM3MSwtMC45MzEgMCwtMS4yNDhjMC4zNDgsLTAuMzI1IDAuODk5LC0wLjMyNSAxLjIxOCwwbDUuNjQ4LDUuMjc1bC0wLjM5MywwLjM2N2wtNS4yMDMsNC44NzJjLTAuMTcsMC4xNTggLTAuMzkzLDAuMjQyIC0wLjYyMiwwLjI0MmMtMC4yMjksMCAtMC40MzksLTAuMDg1IC0wLjYwOCwtMC4yNDJjLTAuMzcyLC0wLjM0NyAtMC4zNzIsLTAuOTMxIDAsLTEuMjQ4bDQuMjczLC0zLjk5MWwtNC4zMTMsLTQuMDI3Wm0tNC4yNjgsMGwtNC4zMTMsNC4wMjdsNC4yNzMsMy45OTFjMC4zNzIsMC4zMTcgMC4zNzIsMC45MDEgMCwxLjI0OGMtMC4xNjksMC4xNTcgLTAuMzc5LDAuMjQyIC0wLjYwOCwwLjI0MmMtMC4yMjksMCAtMC40NTIsLTAuMDg0IC0wLjYyMiwtMC4yNDJsLTUuMjAzLC00Ljg3MmwtMC4zOTMsLTAuMzY3bDUuNjQ4LC01LjI3NWMwLjMxOSwtMC4zMjUgMC44NywtMC4zMjUgMS4yMTgsMGMwLjM3MSwwLjMxNyAwLjM3MSwwLjkwMSAwLDEuMjQ4WiIgc3R5bGU9ImZpbGw6I2ZmZjtmaWxsLXJ1bGU6bm9uemVybzsiLz48L3N2Zz4=')
+    center no-repeat;
+  --range-thumb-background-size: 18px 12px;
+  --range-thumb-shadow: 0 0 1px rgba(0, 0, 0, 0.06),
+    0 2px 2px rgba(0, 0, 20, 0.1);
+  --range-thumb-shadow-focus: 0 0 1px rgba(0, 0, 0, 0.06),
+    0 4px 2px rgba(0, 0, 20, 0.06), 0 4px 12px rgba(0, 0, 20, 0.25);
+  --range-thumb-transition: box-shadow 0.2s;
+
+  --range-track-height: 8px;
+  --range-track-border: 0;
+  --range-track-radius: 8px;
+  --range-track-background: #fff;
+  --range-track-shadow: 0 0 0 1px rgba(204, 204, 204, 0.25);
+  --range-track-shadow-focus: 0 0 0 1px rgba(204, 204, 204, 0.75);
+}
+
+/* // Styler la poignée */
+
+/* // Webkit / Blink */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* // cursor: pointer; */
+  width: var(--range-thumb-width);
+  height: var(--range-thumb-width);
+  border: var(--range-thumb-border);
+  border-radius: var(--range-thumb-radius);
+  margin-top: (var(--range-thumb-height) - var(--range-track-height)) * -0.5;
+  background: var(--range-thumb-background);
+  background-size: var(--range-thumb-background-size);
+  box-shadow: var(--range-thumb-shadow);
+  transition: var(--range-thumb-transition);
+}
+
+input[type='range']:focus::-webkit-slider-thumb {
+  box-shadow: var(--range-thumb-shadow-focus);
+}
+
+/* // Gecko */
+input[type='range']::-moz-range-thumb {
+  /* // cursor: pointer; */
+  width: var(--range-thumb-width);
+  height: var(--range-thumb-height);
+  border: var(--range-thumb-border);
+  border-radius: var(--range-thumb-radius);
+  background: var(--range-thumb-background);
+  background-size: var(--range-thumb-background-size);
+  box-shadow: var(--range-thumb-shadow);
+  transition: var(--range-thumb-transition);
+}
+
+input[type='range']:focus::-moz-range-thumb {
+  box-shadow: var(--range-thumb-shadow-focus);
+}
+
+/* // IE */
+input[type='range']::-ms-thumb {
+  /* // cursor: pointer; */
+  width: var(--range-thumb-width);
+  height: var(--range-thumb-height);
+  border: var(--range-thumb-border);
+  border-radius: var(--range-thumb-radius);
+  background: var(--range-thumb-background);
+  background-size: var(--range-thumb-background-size);
+  box-shadow: var(--range-thumb-shadow);
+  transition: var(--range-thumb-transition);
+}
+
+input[type='range']:focus::-ms-thumb {
+  box-shadow: var(--range-thumb-shadow-focus);
+}
+
+/* // Styling the track */
+
+/* // Webkit / Blink */
+input[type='range']::-webkit-slider-runnable-track {
+  /* // cursor: pointer; */
+  width: 100%;
+  height: var(--range-track-height);
+  border: var(--range-track-border);
+  border-radius: var(--range-track-radius);
+  background: var(--range-track-background);
+  box-shadow: var(--range-track-shadow);
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  box-shadow: var(--range-track-shadow-focus);
+}
+
+/* // Gecko */
+input[type='range']::-moz-range-track {
+  cursor: pointer;
+  width: 100%;
+  height: var(--range-track-height);
+  border: var(--range-track-border);
+  border-radius: var(--range-track-radius);
+  background: var(--range-track-background);
+  box-shadow: var(--range-track-shadow);
+}
+
+input[type='range']:focus::-moz-range-track {
+  box-shadow: var(--range-track-shadow-focus);
+}
+
+/* // IE */
+input[type='range']::-ms-track {
+  /* // cursor: pointer; */
+  width: 100%;
+  height: var(--range-track-height);
+  border-width: ((var(--range-thumb-height) - var(--range-track-height))/2) 0;
+  border-color: transparent;
+  background: transparent;
+  color: transparent;
+}
+
+input[type='range']::-ms-fill-lower {
+  border: var(--range-track-border);
+  border-radius: var(--range-track-radius);
+  background: var(--range-track-background);
+  box-shadow: var(--range-track-shadow);
+}
+
+input[type='range']::-ms-fill-upper {
+  border: var(--range-track-border);
+  border-radius: var(--range-track-radius);
+  background: var(--range-track-background);
+  box-shadow: var(--range-track-shadow);
+}
+
+input[type='range']:focus::-ms-fill-lower {
+  box-shadow: var(--range-track-shadow-focus);
+}
+
+input[type='range']:focus::-ms-fill-upper {
+  box-shadow: var(--range-track-shadow-focus);
+}
