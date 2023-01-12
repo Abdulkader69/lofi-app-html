@@ -129,6 +129,16 @@ header#main-header button.mute-all.muted img.v-mute {
   transform: translate(-50%, -50%);
   width: 100%;
   z-index: 400;
+  transition: all 3s ease-in;
+}
+.bg-video.raining {
+  opacity: 0;
+}
+body.raining .bg-video.raining {
+  opacity: 1;
+}
+body.raining .bg-video.default {
+  opacity: 0;
 }
 .bg-video video {
   object-fit: cover;
@@ -197,8 +207,30 @@ header#main-header button.mute-all.muted img.v-mute {
   font-size: 25px;
   font-weight: 700;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 #mixer .sounds-wrap input {
   width: 100%;
+}
+#mixer .sounds-wrap .sound-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+#mixer .sounds-wrap .sound-item span {
+  width: 90px;
+  opacity: 0.8;
+  font-size: 16px;
+}
+#mixer .sounds-wrap .sound-item .range {
+  flex: 1;
+}
+#mixer .close-bar {
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  right: 15px;
+  cursor: pointer;
 }

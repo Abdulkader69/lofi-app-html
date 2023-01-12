@@ -45,6 +45,11 @@ let rainVolume = document.getElementById('city-rain');
 rainVolume.addEventListener('change', function (e) {
   rainAudio.play();
   rainAudio.volume = e.currentTarget.value / 100;
+  if (rainAudio.volume > 0) {
+    body.classList.add('raining');
+  } else {
+    body.classList.remove('raining');
+  }
 });
 
 let muteBTN = document.querySelector('.mute-all');

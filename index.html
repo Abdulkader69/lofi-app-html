@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <link rel="stylesheet" href="range.css" /> -->
+    <link rel="stylesheet" href="range.css" />
     <title>Lofi App</title>
   </head>
   <body>
@@ -102,18 +102,27 @@
         </div>
       </div>
       <div class="videos-wrapper">
-        <div class="screen1">
-          <div class="bg-video default">
-            <video
-              src="assets/video/inside+-+day.mp4"
-              preload="auto"
-              loop
-              playsinline
-              webkit-playsinline
-              x5-playsinline
-              autoplay
-            ></video>
-          </div>
+        <div class="screen1 bg-video default">
+          <video
+            src="assets/video/inside+-+day.mp4"
+            preload="auto"
+            loop
+            playsinline
+            webkit-playsinline
+            x5-playsinline
+            autoplay
+          ></video>
+        </div>
+        <div class="screen2 bg-video raining">
+          <video
+            src="assets/video/inside+-+day+-+rain.mp4"
+            preload="auto"
+            loop
+            playsinline
+            webkit-playsinline
+            x5-playsinline
+            autoplay
+          ></video>
         </div>
       </div>
       <div class="music-player">
@@ -127,6 +136,7 @@
         ></audio>
       </div>
       <div id="mixer">
+        <!-- <div class="close-bar"></div> -->
         <div class="music-volume">
           <img src="assets/images/volume-down.svg" alt="volume-down" />
           <div class="range">
@@ -143,7 +153,7 @@
         </div>
         <div class="sounds-wrap">
           <h2>Sounds</h2>
-          <div class="keyboard">
+          <div class="sound-item keyboard">
             <span>Keyboard</span>
             <div class="range">
               <input
@@ -163,7 +173,7 @@
               src="assets/audio/keyboard.mp3"
             ></audio>
           </div>
-          <div class="city-traffic">
+          <div class="sound-item city-traffic">
             <span>City Traffic</span>
             <div class="range">
               <input
@@ -183,7 +193,7 @@
               src="assets/audio/city_traffic.mp3"
             ></audio>
           </div>
-          <div class="city-rain">
+          <div class="sound-item city-rain">
             <span>City Rain</span>
             <div class="range">
               <input
