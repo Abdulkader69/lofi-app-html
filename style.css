@@ -150,7 +150,7 @@ body.raining .bg-video.default {
   top: 50%;
   transform: translateY(-50%);
   background: hsla(0, 0%, 7%);
-  z-index: 500;
+  z-index: 501;
   border-radius: 4px;
 }
 .right-sidebar .icon {
@@ -233,4 +233,12 @@ body.raining .bg-video.default {
   background-color: #fff;
   right: 15px;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .right-sidebar {
+    right: 10px;
+  }
+  #mixer {
+    max-width: 270px;
+  }
 }
