@@ -96,6 +96,7 @@ header#main-header button.mute-all {
   width: 32px;
   transition: all 0.3s ease-in;
   cursor: pointer;
+  background-color: transparent;
 }
 header#main-header button.mute-all img {
   width: 100%;

@@ -52,6 +52,20 @@ rainVolume.addEventListener('change', function (e) {
   }
 });
 
+var campfireAudio = document.querySelector('.campfire audio');
+let campfireVolume = document.getElementById('campfire');
+campfireVolume.addEventListener('change', function (e) {
+  campfireAudio.play();
+  campfireAudio.volume = e.currentTarget.value / 100;
+});
+
+var forestAudio = document.querySelector('.forest-night audio');
+let forestVolume = document.getElementById('forest-night');
+forestVolume.addEventListener('change', function (e) {
+  forestAudio.play();
+  forestAudio.volume = e.currentTarget.value / 100;
+});
+
 let muteBTN = document.querySelector('.mute-all');
 var allAudios = document.querySelectorAll('audio');
 muteBTN.addEventListener('click', function (e) {
